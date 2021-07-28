@@ -1,0 +1,351 @@
+/* Global */
+
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-beige: #f1eae2;
+  --color-dark-beige: #dbcdc3;
+  --color-pink: #fe918d;
+  --color-red: #d95252;
+  --color-dark-pink: #ff6863;
+  --color-dark-grey: #4d4d4d;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+  --color-blue: #5296a5;
+  --color-yellow: #fff7d1;
+  --color-orange: #f2c861;
+  --color-black: #000000;
+
+  /* Font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  /* Size */
+  --size-border-radius: 4px;
+
+  /* Animation */
+  --animation-duration: 300ms;
+}
+
+/* Universal tags */
+
+* {
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: var(--color-dark-grey);
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Typography  */
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-black);
+  margin: 16px 0px;
+}
+
+h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-black);
+  margin: 8px 0;
+}
+
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--font-regular);
+  color: var(--color-black);
+  margin: 8px 0;
+}
+
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--font-regular);
+  margin: 4px 0;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  /* Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadein {
+  /* Opera */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-moz-keyframes fadeout {
+  /* Firefox */
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeout {
+  /* Safari and Chrome */
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-o-keyframes fadeout {
+  /* Opera */
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+#nav {
+  position: fixed;
+  top: 50px;
+  right: 20px;
+  width: 140px;
+  height: 200px;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.nav__container {
+  padding: 10px;
+}
+
+.nav__list {
+  cursor: pointer;
+}
+
+.nav__list li {
+  padding: 5px 0;
+  color: black;
+}
+.nav__list li:hover {
+  color: deeppink;
+}
+
+.nav__list li span {
+  display: inline-block;
+  vertical-align: middle;
+  margin: -5px 10px 0 0;
+  width: 5px;
+  height: 5px;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 50%;
+}
+.nav__list li span :hover {
+  color: deeppink;
+}
+.nav__list li.active {
+  color: deeppink;
+}
+
+.nav__list li.active span {
+  display: inline-block;
+  vertical-align: middle;
+  margin: -5px 10px 0 0;
+  width: 5px;
+  height: 30px;
+  border: 1px solid deeppink;
+  background-color: deeppink;
+  border-radius: 25%;
+  transition: height 0.5s ease;
+}
+
+#home {
+  width: 100%;
+  height: 2000px;
+  overflow: hidden;
+  animation: fadein 3s;
+  -moz-animation: fadein 3s; /* Firefox */
+  -webkit-animation: fadein 3s; /* Safari and Chrome */
+  -o-animation: fadein 3s; /* Opera */
+  animation-fill-mode: forwards;
+  background-image: url(/img/logo.gif);
+  background-repeat: repeat-y;
+}
+
+.home__container {
+  width: 100%;
+  display: flex;
+  background-color: blueviolet;
+  transition: all 1s ease-in-out;
+}
+
+#main {
+  width: 100%;
+  background-color: var(--color-white);
+}
+
+.main__header {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main__header img {
+  width: 100%;
+}
+
+.main__content {
+  display: flex;
+  width: 100%;
+  height: 1000px;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-black);
+}
+
+.movie {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-white);
+}
+
+#portfolio {
+  width: 100%;
+  background-color: #ffc889;
+  animation: fadein 3s;
+  -moz-animation: fadein 3s; /* Firefox */
+  -webkit-animation: fadein 3s; /* Safari and Chrome */
+  -o-animation: fadein 3s; /* Opera */
+  animation-fill-mode: forwards;
+}
+
+.portfolio__content {
+  display: flex;
+  width: 100%;
+  height: 500px;
+  margin: 50px 0;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffc889;
+}
+
+.portfolio__header {
+  display: flex;
+  width: 100%;
+  height: 300px;
+  justify-content: left;
+  align-items: center;
+  background-color: white;
+}
+#about {
+  width: 100%;
+  background-color: rgb(255, 255, 130);
+  animation: fadein 3s;
+  -moz-animation: fadein 3s; /* Firefox */
+  -webkit-animation: fadein 3s; /* Safari and Chrome */
+  -o-animation: fadein 3s; /* Opera */
+  animation-fill-mode: forwards;
+}
+
+.about__header {
+  display: flex;
+  width: 100%;
+  height: 300px;
+  justify-content: left;
+  align-items: center;
+  background-color: white;
+}
+
+#contact {
+  width: 100%;
+  background-color: rgb(208, 255, 113);
+  animation: fadein 3s;
+  -moz-animation: fadein 3s; /* Firefox */
+  -webkit-animation: fadein 3s; /* Safari and Chrome */
+  -o-animation: fadein 3s; /* Opera */
+  animation-fill-mode: forwards;
+}
+
+.contact__header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  width: 100%;
+  height: 150px;
+  justify-content: left;
+  align-items: center;
+  background-color: white;
+}
+.contact__content {
+  display: flex;
+  width: 100%;
+  height: 1000px;
+  margin: 50px 0;
+  padding-top: 150px;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgb(208, 255, 113);
+}

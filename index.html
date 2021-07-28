@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YoungLit</title>
+    <link rel="shortcut icon" href="#" />
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- javascript -->
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <section id="nav">
+      <div class="nav__container">
+        <ul class="nav__list">
+          <li onclick="go_page(1)" class="active"><span></span>Main</li>
+          <li onclick="go_page(2)"><span></span>Portfolio</li>
+          <li onclick="go_page(3)"><span></span>About</li>
+          <li onclick="go_page(4)"><span></span>Contact</li>
+        </ul>
+      </div>
+    </section>
+    <section id="home">
+      <div class="home__container">
+        <div id="main">
+          <div class="main__header"><img src="/img/logo.gif" /></div>
+          <div class="main__content">
+            <div class="movie">
+              <iframe
+                id="player"
+                width="500"
+                height="300"
+                src="https://www.youtube.com/embed/4TWR90KJl84?enablejsapi=1"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer;clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
