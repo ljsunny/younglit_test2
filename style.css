@@ -227,7 +227,7 @@ p {
   -webkit-animation: fadein 3s; /* Safari and Chrome */
   -o-animation: fadein 3s; /* Opera */
   animation-fill-mode: forwards;
-  background-image: url(/img/logo.gif);
+  background-image: url(./img/logo.gif);
   background-repeat: repeat-y;
 }
 
