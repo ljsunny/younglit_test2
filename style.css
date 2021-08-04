@@ -257,7 +257,7 @@ p {
 .main__content {
   display: flex;
   width: 100%;
-  height: 1000px;
+  height: 500px;
   margin: 0;
   justify-content: center;
   align-items: center;
@@ -270,6 +270,78 @@ p {
   justify-content: center;
   align-items: center;
   background-color: var(--color-white);
+}
+
+#PofolMain {
+  width: 100%;
+  height: 500px;
+  background-color: yellow;
+  padding: 10px;
+}
+
+.pofol__container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  min-width: 1000px;
+  height: 100%;
+  background-color: rgb(38, 43, 28);
+}
+
+.pofol {
+  position: relative;
+  margin-left: 100px;
+  background-color: #ff6863;
+}
+
+.pofol__bb {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 120px;
+  left: 50px;
+  background-color: rgb(255, 255, 130);
+  z-index: 1;
+}
+
+.pofol__b {
+  position: absolute;
+  width: 400px;
+  height: 230px;
+  top: 110px;
+  left: 130px;
+  background-color: var(--color-blue);
+  z-index: 2;
+}
+
+.pofol__main {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  top: 80px;
+  left: 300px;
+  background-color: var(--color-dark-beige);
+  z-index: 3;
+}
+
+.pofol__a {
+  position: absolute;
+  width: 400px;
+  height: 230px;
+  top: 110px;
+  left: 550px;
+  background-color: var(--color-blue);
+  z-index: 2;
+}
+
+.pofol__aa {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 120px;
+  left: 850px;
+  background-color: rgb(255, 255, 130);
+  z-index: 1;
 }
 
 #portfolio {
@@ -302,7 +374,7 @@ p {
 }
 #about {
   width: 100%;
-  background-color: rgb(255, 255, 130);
+  background-color: rgb(0, 0, 0);
   animation: fadein 3s;
   -moz-animation: fadein 3s; /* Firefox */
   -webkit-animation: fadein 3s; /* Safari and Chrome */
@@ -317,6 +389,10 @@ p {
   justify-content: left;
   align-items: center;
   background-color: white;
+}
+
+.about__content img {
+  width: 100%;
 }
 
 #contact {
